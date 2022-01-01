@@ -1,0 +1,862 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Raleway", sans-serif;
+}
+html {
+	scroll-behavior: smooth;
+}
+:root {
+	--main-backColor: #ecede2;
+	--main-btnColor: #32c182;
+	--socnd-backColor: #333333;
+	--another-backColr: #dcddd3;
+	--color-box: #e8e8e8;
+	--hoverColor: #2EA16E;
+}
+.container {
+	padding-left: 350px;
+	padding-right: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header {
+	position: fixed;
+	border-bottom: 1px solid #f3eeee;
+	width: 100%;
+	height: 70px;
+	z-index: 9999;
+	background-color: var(--socnd-backColor);
+}
+.header .container {
+	height: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .container h1 {
+	color: #ffffff;
+}
+.header .container .links ul {
+	list-style: none;
+	display: flex;
+}
+.header span {
+	display: none;
+}
+.header .container .links ul li {
+	padding-left: 50px;
+}
+.header .container .links ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.header .container .links ul li a:hover {
+	color: var(--main-btnColor);
+	transition: 0.6s;
+}
+.home {
+	height: 100vh;
+	background-image: url(../img/back.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	vertical-align: middle;
+}
+.home .container {
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(1, 1, 1, 0.5);
+}
+.home .container h1 {
+	font-size: 70px;
+	max-width: 900px;
+	color: #ffffff;
+	font-weight: 600;
+}
+.home .container p:first-child {
+	color: #ffffff;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.9;
+}
+.home .container p:last-child {
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.9;
+}
+.home .container .div-btn .btn {
+	background-color: var(--main-btnColor);
+	border: none;
+	outline: none;
+	width: 180px;
+	height: 50px;
+	padding: 10px;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-top: 50px;
+	cursor: pointer;
+}
+.about-me {
+	background-color: var(--main-backColor);
+	height: 60vh;
+	padding-top: 100px;
+	padding-bottom: 500px;
+}
+.about-me .container .about-head h1,
+.pricing .container .pricing-head h1,
+.say .container .head-say h1,
+.contact-me .container .contact-me-head h1 {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 400;
+	padding-bottom: 50px;
+	position: relative;
+}
+.about-me .container .about-head h1::after,
+.pricing .container .pricing-head h1::after,
+.say .container .head-say h1::after,
+.contact-me .container .contact-me-head h1::after {
+	content: "";
+	position: absolute;
+	bottom: 25px;
+	left: 50px;
+	width: 50px;
+	height: 3px;
+	border-radius: 6px;
+	background-color: var(--main-btnColor);
+}
+.about-me .container .about-info {
+	display: flex;
+	justify-content: space-between;
+}
+.about-me .container .about-info .info {
+	max-width: 550px;
+}
+.about-me .container .about-info .info p {
+	line-height: 1.9;
+	font-size: 17px;
+}
+.pricing {
+	background-color: var(--another-backColr);
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.pricing .container {
+	height: 50vh;
+}
+
+.pricing .container .pricing-head h1::after {
+	left: 33px;
+}
+.pricing .container .pricing-box {
+	display: flex;
+	height: inherit;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.pricing .container .pricing-box .box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+.pricing .container .pricing-box .box::before {
+	content: "220$";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	font-size: 25px;
+	font-weight: 600;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: var(--main-btnColor);
+	top: -50px;
+	left: 33%;
+}
+.pricing .container .pricing-box .box-head {
+	background-color: var(--color-box);
+	height: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.pricing .container .pricing-box .box-head h3 {
+	font-weight: 400;
+	font-size: 20px;
+}
+.pricing .container .pricing-box .box-info {
+	background-color: #ffffff;
+	padding: 10px;
+	text-align: center;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pricing .container .pricing-box .div-box-btn button {
+	width: 100%;
+	height: 50px;
+	background-color: var(--main-btnColor);
+	color: #ffffff;
+	border: none;
+	outline: none;
+	font-size: 25px;
+	font-weight: 400;
+	cursor: pointer;
+}
+.left,
+.right {
+	height: 70%;
+}
+.say .container .head-say h1::after {
+	left: 40%;
+}
+.say {
+	background-color: var(--main-backColor);
+	padding: 100px 0;
+	height: 85vh;
+}
+.say .container {
+	height: inherit;
+}
+.say .container .some-say {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.say .container .some-say .people-say {
+	height: 400px;
+	max-width: 400px;
+}
+.say .container .some-say .people-say .letter-people {
+	letter-spacing: 1px;
+	line-height: 1.6;
+	font-size: 18px;
+	padding-bottom: 30px;
+	max-width: 350px;
+}
+.say .container .some-say .people-say .img-people img {
+	width: 200px;
+	height: 150px;
+	border: 6px solid #fff;
+}
+.contact {
+	height: 50vh;
+	background-image: url(../img/backg-two.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.contact .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: inherit;
+	background-color: rgba(1, 1, 1, 0.5);
+}
+.contact .container .head-contact h1 {
+	color: #ffffff;
+}
+.contact .container .btn-contact button {
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	outline: none;
+	width: 170px;
+	height: 60px;
+	padding: 10px;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-top: 50px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.contact .container .btn-contact button:hover {
+	background-color: var(--main-btnColor);
+	border: none;
+}
+.contact-me {
+	height: 80vh;
+	background-color: var(--main-backColor);
+	padding: 100px 0;
+}
+.contact-me .container {
+	height: inherit;
+}
+.contact-me .container .contact-me-info {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.contact-me .container .contact-me-info p:first-child {
+	font-size: 16px;
+	font-weight: 300;
+	padding-bottom: 15px;
+}
+.contact-me .container .contact-me-info p:nth-child(2) a {
+	display: inline-block;
+	color: var(--main-btnColor);
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 300;
+	padding-bottom: 15px;
+}
+.contact-me .container .contact-me-info p:last-child {
+	font-size: 16px;
+	font-weight: 300;
+	padding-bottom: 15px;
+}
+.contact-me .container .contact-me-form form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.contact-me .container .contact-me-form form input {
+	width: 70%;
+	height: 45px;
+	margin-bottom: 30px;
+	border-radius: 6px;
+	border: 1px solid #cccccc;
+	padding: 20px;
+	outline: none;
+}
+.contact-me .container .contact-me-form form input:first-child:focus,
+.contact-me .container .contact-me-form form input:nth-child(2):focus,
+.contact-me .container .contact-me-form form input:nth-child(3):focus {
+	border: 1px solid var(--main-btnColor);
+	box-shadow: 0 0 4px 0 var(--main-btnColor);
+	transition: 0.4s;
+}
+.contact-me .container .contact-me-form form textarea {
+	all: unset;
+	width: 70%;
+	min-height: 120px;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	border-radius: 6px;
+	border: 1px solid #cccccc;
+	background-color: #ffffff;
+}
+.contact-me .container .contact-me-form form input:nth-child(5) {
+	height: 45px;
+	border: none;
+	outline: none;
+	background-color: var(--main-btnColor);
+	color: #ffffff;
+	font-size: 18px;
+	padding: 5px;
+	font-weight: 100;
+}
+.footer {
+	height: 20vh;
+	background-color: var(--socnd-backColor);
+	padding: 50px 0;
+}
+.footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+.footer .container .logo h1 {
+	color: #ffffff;
+	text-transform: capitalize;
+	font-size: 20px;
+	font-weight: 400;
+}
+.footer .container .logo p {
+	color: #ffffff;
+	font-size: 17px;
+	font-weight: 200;
+	line-height: 2;
+}
+.footer .container .links ul {
+	list-style: none;
+	display: flex;
+}
+.footer .container .links ul li {
+	padding-left: 50px;
+}
+.footer .container .links ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.footer .container .links ul li a:hover {
+	color: var(--main-btnColor);
+	transition: 0.6s;
+}
+.footer .container .icon {
+	display: flex;
+	flex-direction: column;
+
+}
+.footer .container .icon .ico {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 30px;
+}
+.footer .container .icon .ico i {
+	color: var(--main-btnColor);
+}
+.footer .container .icon .ico i:hover{
+	color: var(--hoverColor);
+	transition: 0.6s;
+}
+@media (max-width: 767px) {
+	.container {
+		padding-left: 25px;
+		padding-right: 25px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.header {
+		position: fixed;
+		border-bottom: 1px solid #f3eeee;
+		width: 100%;
+		height: 60px;
+		z-index: 9999;
+	}
+	.header .container {
+		height: inherit;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        border: 1px white solid;
+	}
+	.header span {
+		display: block;
+		font-size: 20px;
+		color: #ffffff;
+	}
+	.header .container h1 {
+		color: #ffffff;
+		font-size: 15px;
+	}
+	#span {
+		position: absolute;
+		top: 50px;
+		right: 70px;
+		z-index: 9999999999;
+	}
+    .header .links{
+        display: none;
+    }
+	.header .links ul {
+		position: fixed;
+		top: 0px;
+		bottom: 0;
+		left: -25px;
+		right: 0;
+		z-index: 9999;
+		background-color: #333333;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.header .container .links ul li a {
+		text-decoration: none;
+		color: #ffffff;
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 1px;
+	}
+	.header li {
+		margin-bottom: 50px;
+	}
+	.header .container .links ul li a:hover {
+		color: var(--main-btnColor);
+		transition: 0.6s;
+	}
+	.home {
+		height: 100vh;
+		background-image: url(../img/back.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		vertical-align: middle;
+	}
+	.home .container {
+		height: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: rgba(1, 1, 1, 0.5);
+	}
+	.home .container h1 {
+		font-size: 35px;
+		max-width: 400px;
+		color: #ffffff;
+		font-weight: 300;
+	}
+	.home .container p:first-child {
+		color: #ffffff;
+		font-size: 25px;
+		font-weight: 300;
+		line-height: 1.9;
+	}
+	.home .container p:last-child {
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 1.9;
+	}
+	.home .container .div-btn .btn {
+		background-color: var(--main-btnColor);
+		border: none;
+		outline: none;
+		width: 130px;
+		height: 40px;
+		padding: 5px;
+		border-radius: 6px;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-top: 30px;
+		cursor: pointer;
+	}
+	.about-me {
+		background-color: var(--main-backColor);
+		height: 60vh;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.about-me .container .about-head h1,
+	.pricing .container .pricing-head h1,
+	.say .container .head-say h1,
+	.contact-me .container .contact-me-head h1 {
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		text-transform: uppercase;
+		font-size: 25px;
+		font-weight: 300;
+		padding-bottom: 40px;
+		position: relative;
+	}
+	.about-me .container .about-head h1::after,
+	.pricing .container .pricing-head h1::after,
+	.say .container .head-say h1::after,
+	.contact-me .container .contact-me-head h1::after {
+		content: "";
+		position: absolute;
+		bottom: 25px;
+		left: 40%;
+		width: 40px;
+		height: 2px;
+		border-radius: 6px;
+		background-color: var(--main-btnColor);
+	}
+	.about-me .container .about-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.about-me .container .about-info .info {
+		max-width: 400px;
+	}
+	.about-me .container .about-info .info p {
+		line-height: 1.1;
+		font-size: 15px;
+	}
+	.about-me .container .about-info .about-img img {
+		height: 140px;
+		margin-top: 10px;
+		border-radius: 6px;
+	}
+	.pricing {
+		background-color: var(--another-backColr);
+		padding-top: 50px;
+		padding-bottom: 50px;
+		height: auto;
+	}
+	.pricing .container {
+		height: inherit;
+	}
+
+	.pricing .container .pricing-head h1::after {
+		left: 33px;
+	}
+	.pricing .container .pricing-box {
+		display: flex;
+		height: inherit;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.pricing .container .pricing-box .box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		height: 30%;
+		margin-top: 50px;
+		/* margin-bottom: 50px; */
+	}
+
+	.pricing .container .pricing-box .box::before {
+		content: "220$";
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: 500;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: var(--main-btnColor);
+		top: -28px;
+		left: 42%;
+	}
+	.pricing .container .pricing-box .box-head {
+		background-color: var(--color-box);
+		height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.pricing .container .pricing-box .box-head h3 {
+		font-weight: 300;
+		font-size: 15px;
+	}
+	.pricing .container .pricing-box .box-info {
+		background-color: #ffffff;
+		padding: 8px;
+		text-align: center;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.pricing .container .pricing-box .div-box-btn button {
+		width: 100%;
+		height: 40px;
+		background-color: var(--main-btnColor);
+		color: #ffffff;
+		border: none;
+		outline: none;
+		font-size: 20px;
+		font-weight: 300;
+		cursor: pointer;
+	}
+	.say .container .head-say h1::after {
+		left: 40%;
+	}
+	.say {
+		background-color: var(--main-backColor);
+		padding: 50px 0;
+		height: auto;
+	}
+	.say .container {
+		height: inherit;
+	}
+	.say .container .some-say {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.say .container .some-say .people-say {
+		height: 390px;
+		max-width: 300px;
+	}
+	.say .container .some-say .people-say .letter-people {
+		letter-spacing: 1px;
+		line-height: 1.4;
+		font-size: 16px;
+		padding-bottom: 15px;
+		max-width: 300px;
+	}
+	.say .container .some-say .people-say .img-people img {
+		width: 180px;
+		height: 130px;
+		border: 6px solid #fff;
+	}
+	.contact {
+		height: 50vh;
+		background-image: url(../img/backg-two.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.contact .container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: inherit;
+		background-color: rgba(1, 1, 1, 0.5);
+	}
+	.contact .container .head-contact h1 {
+		color: #ffffff;
+		font-size: 30px;
+		text-align: center;
+	}
+	.contact .container .btn-contact button {
+		background-color: transparent;
+		border: 1px solid #ffffff;
+		outline: none;
+		width: 130px;
+		height: 50px;
+		padding: 4px;
+		border-radius: 8px;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-top: 50px;
+		cursor: pointer;
+		transition: 0.8s;
+	}
+	.contact .container .btn-contact button:hover {
+		background-color: var(--main-btnColor);
+		border: none;
+	}
+	.contact-me {
+		height: auto;
+		background-color: var(--main-backColor);
+		padding: 50px 0;
+	}
+	.contact-me .container {
+		height: inherit;
+	}
+	.contact-me .container .contact-me-info {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.contact-me .container .contact-me-info p:first-child {
+		font-size: 16px;
+		font-weight: 350;
+		padding-bottom: 10px;
+	}
+	.contact-me .container .contact-me-info p:nth-child(2) a {
+		display: inline-block;
+		color: var(--main-btnColor);
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 400;
+		padding-bottom: 10px;
+	}
+	.contact-me .container .contact-me-info p:last-child {
+		font-size: 14px;
+		font-weight: 250;
+		padding-bottom: 10px;
+	}
+	.contact-me .container .contact-me-form form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+	.contact-me .container .contact-me-form form input {
+		width: 100%;
+		height: 40px;
+		margin-bottom: 20px;
+		border-radius: 6px;
+		border: 1px solid #cccccc;
+		padding: 15px;
+		outline: none;
+	}
+	.contact-me .container .contact-me-form form input:first-child:focus,
+	.contact-me .container .contact-me-form form input:nth-child(2):focus,
+	.contact-me .container .contact-me-form form input:nth-child(3):focus {
+		border: 1px solid var(--main-btnColor);
+		box-shadow: 0 0 4px 0 var(--main-btnColor);
+		transition: 0.4s;
+	}
+	.contact-me .container .contact-me-form form textarea {
+		all: unset;
+		width: 100%;
+		min-height: 120px;
+		padding: 15px;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		border-radius: 6px;
+		border: 1px solid #cccccc;
+		background-color: #ffffff;
+	}
+	.contact-me .container .contact-me-form form input:nth-child(5) {
+		height: 44px;
+		border: none;
+		outline: none;
+		background-color: var(--main-btnColor);
+		color: #ffffff;
+		font-size: 16px;
+		padding: 5px;
+		font-weight: 100;
+	}
+	.footer {
+		height: 20vh;
+		background-color: var(--socnd-backColor);
+		padding: 30px 0;
+	}
+	.footer .container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.footer .container .logo h1 {
+		color: #ffffff;
+		text-transform: capitalize;
+		font-size: 16px;
+		font-weight: 200;
+		text-align: center;
+	}
+	.footer .container .logo p {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 200;
+		line-height: 2;
+	}
+	.footer .container .links {
+		display: none;
+	}
+
+	.footer .container .icon .ico {
+		margin-top: 5px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.footer .container .icon .ico i{
+		font-size: 20px;
+		margin-left: 25px;
+	}
+}
