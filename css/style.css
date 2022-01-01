@@ -111,7 +111,7 @@ html {
 }
 .about-me {
 	background-color: var(--main-backColor);
-	height: 60vh;
+	height: auto;
 	padding-top: 100px;
 	padding-bottom: 500px;
 }
@@ -155,10 +155,11 @@ html {
 .pricing {
 	background-color: var(--another-backColr);
 	padding-top: 100px;
+	height:auto;
 	padding-bottom: 100px;
 }
 .pricing .container {
-	height: 50vh;
+	height: auto;
 }
 
 .pricing .container .pricing-head h1::after {
@@ -234,7 +235,7 @@ html {
 .say {
 	background-color: var(--main-backColor);
 	padding: 100px 0;
-	height: 85vh;
+	height: auto;
 }
 .say .container {
 	height: inherit;
@@ -261,7 +262,7 @@ html {
 	border: 6px solid #fff;
 }
 .contact {
-	height: 50vh;
+	height: auto;
 	background-image: url(../img/backg-two.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -300,7 +301,7 @@ html {
 	border: none;
 }
 .contact-me {
-	height: 80vh;
+	height: auto;
 	background-color: var(--main-backColor);
 	padding: 100px 0;
 }
