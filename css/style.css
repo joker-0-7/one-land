@@ -27,7 +27,7 @@ html {
 	width: 100%;
 	height: 70px;
 	z-index: 9999;
-	background-color: var(--socnd-backColor);
+	background-color: transparent;
 }
 .header .container {
 	height: inherit;
@@ -45,6 +45,9 @@ html {
 .header span {
 	display: none;
 }
+.header .container .links {
+	display: flex;
+}
 .header .container .links ul li {
 	padding-left: 50px;
 }
@@ -55,6 +58,20 @@ html {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 1px;
+	position: relative;
+}
+.header .container .links ul li a::after {
+	content: "";
+	background-color: var(--main-btnColor);
+	width: 0;
+	height: 1px;
+	position: absolute;
+	bottom: -13px;
+	left: 0;
+	transition: 0.4s;
+}
+.header .container .links ul li a:hover::after {
+	width: 100%;
 }
 .header .container .links ul li a:hover {
 	color: var(--main-btnColor);
@@ -135,8 +152,9 @@ html {
 	content: "";
 	position: absolute;
 	bottom: 25px;
-	left: 50px;
+	left: 50%;
 	width: 50px;
+	transform: translateX(-50%);
 	height: 3px;
 	border-radius: 6px;
 	background-color: var(--main-btnColor);
@@ -159,10 +177,6 @@ html {
 }
 .pricing .container {
 	height: 50vh;
-}
-
-.pricing .container .pricing-head h1::after {
-	left: 33px;
 }
 .pricing .container .pricing-box {
 	display: flex;
@@ -191,7 +205,8 @@ html {
 	border-radius: 50%;
 	background-color: var(--main-btnColor);
 	top: -50px;
-	left: 33%;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .pricing .container .pricing-box .box-head {
 	background-color: var(--color-box);
@@ -227,9 +242,6 @@ html {
 .left,
 .right {
 	height: 70%;
-}
-.say .container .head-say h1::after {
-	left: 40%;
 }
 .say {
 	background-color: var(--main-backColor);
@@ -430,7 +442,6 @@ html {
 	color: var(--hoverColor);
 	transition: 0.6s;
 }
-
 @media (max-width: 1400px) {
 	.container {
 		padding-left: 150px;
@@ -466,23 +477,57 @@ html {
 		right: 70px;
 		z-index: 9999999999;
 	}
+	.header .container .links {
+		display: none;
+	}
 	.header .container .links ul {
 		list-style: none;
 		display: flex;
 	}
-	.header span {
+		.header span {
+		display: block;
+		font-size: 20px;
+		color: #ffffff;
+		cursor: pointer;
+	}
+	.header .container h1 {
+		color: #ffffff;
+		font-size: 15px;
+	}
+	#span {
+		position: absolute;
+		top: 50px;
+		right: 70px;
+		z-index: 9999999999;
+		cursor: pointer;
+	}
+	.header .links {
 		display: none;
 	}
-	.header .container .links ul li {
-		padding-left: 40px;
+	.header .links ul {
+		position: fixed;
+		top: 0px;
+		bottom: 0;
+		left: -25px;
+		right: 0;
+		z-index: 9999;
+		background-color: #333333;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
-	.header .container .links ul li a {
+		.header .container .links ul li a {
 		text-decoration: none;
 		color: #ffffff;
-		font-size: 14px;
+		font-size: 16px;
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 600;
 		letter-spacing: 1px;
+		position: relative;
+	}
+	.header li {
+		margin-bottom: 50px;
 	}
 	.header .container .links ul li a:hover {
 		color: var(--main-btnColor);
@@ -595,10 +640,6 @@ html {
 	.pricing .container {
 		height: inherit;
 	}
-
-	.pricing .container .pricing-head h1::after {
-		left: 33px;
-	}
 	.pricing .container .pricing-box {
 		display: flex;
 		height: inherit;
@@ -611,9 +652,7 @@ html {
 		display: flex;
 		flex-direction: column;
 		width: 30%;
-		/* height: 30%; */
 		margin-top: 50px;
-		/* margin-bottom: 50px; */
 	}
 	.left,
 	.right {
@@ -633,7 +672,6 @@ html {
 		border-radius: 50%;
 		background-color: var(--main-btnColor);
 		top: -35px;
-		left: 36%;
 	}
 	.pricing .container .pricing-box .box-head {
 		background-color: var(--color-box);
@@ -891,12 +929,12 @@ html {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border: 1px white solid;
 	}
 	.header span {
 		display: block;
 		font-size: 20px;
 		color: #ffffff;
+		cursor: pointer;
 	}
 	.header .container h1 {
 		color: #ffffff;
@@ -907,6 +945,7 @@ html {
 		top: 50px;
 		right: 70px;
 		z-index: 9999999999;
+		cursor: pointer;
 	}
 	.header .links {
 		display: none;
@@ -927,10 +966,11 @@ html {
 	.header .container .links ul li a {
 		text-decoration: none;
 		color: #ffffff;
-		font-size: 10px;
+		font-size: 16px;
 		text-transform: uppercase;
-		font-weight: 500;
+		font-weight: 600;
 		letter-spacing: 1px;
+		position: relative;
 	}
 	.header li {
 		margin-bottom: 50px;
@@ -1014,7 +1054,7 @@ html {
 		content: "";
 		position: absolute;
 		bottom: 25px;
-		left: 40%;
+		left: 50%;
 		width: 40px;
 		height: 2px;
 		border-radius: 6px;
@@ -1047,9 +1087,6 @@ html {
 	.pricing .container {
 		height: inherit;
 	}
-	.pricing .container .pricing-head h1::after {
-		left: 33px;
-	}
 	.pricing .container .pricing-box {
 		display: flex;
 		height: inherit;
@@ -1064,24 +1101,6 @@ html {
 		width: 90%;
 		height: 30%;
 		margin-top: 50px;
-		/* margin-bottom: 50px; */
-	}
-
-	.pricing .container .pricing-box .box::before {
-		content: "220$";
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #ffffff;
-		font-size: 15px;
-		font-weight: 500;
-		position: absolute;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		background-color: var(--main-btnColor);
-		top: -28px;
-		left: 45%;
 	}
 	.pricing .container .pricing-box .box-head {
 		background-color: var(--color-box);
@@ -1113,9 +1132,6 @@ html {
 		font-size: 20px;
 		font-weight: 300;
 		cursor: pointer;
-	}
-	.say .container .head-say h1::after {
-		left: 40%;
 	}
 	.say {
 		background-color: var(--main-backColor);
