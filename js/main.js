@@ -1,4 +1,4 @@
-// Varible
+// Varibles
 let mnue = document.getElementById("mnue");
 let show = document.getElementById("show");
 let span = document.getElementById("span");
@@ -10,13 +10,9 @@ let up = document.getElementsByClassName("up")[0];
 window.onscroll = () => {
 	if (window.scrollY >= 200) {
 		head.style.backgroundColor = "#333";
-
-	} else {
-		head.style.backgroundColor = "transparent";
-	}
-	if (window.scrollY >= 300) {
 		up.classList.add("active");
 	} else {
+		head.style.backgroundColor = "transparent";
 		up.classList.remove("active");
 	}
 };
